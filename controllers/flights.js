@@ -22,4 +22,4 @@ function create(req, res) {
         if (err) return res.redirect('/flights/new');
         res.redirect('/flights');
     });
-}
+    };

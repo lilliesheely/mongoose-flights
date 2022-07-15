@@ -5,13 +5,15 @@
 <form action="/flights" method="POST">
     <label>Airline
         <select name="airline">
+            <option value=""></option>
             <option value="American">American</option>
             <option value="Southwest">Southwest</option>
             <option value="United">United</option>
           </select>
     </label><br>
-    <label> Airport
+    <label>Airport
         <select name="airport">
+            <option value=""></option>
             <option value="AUS">AUS</option>
             <option value="DFW">DFW</option>
             <option value="DEN">DEN</option>
@@ -24,9 +26,8 @@
       <input type="number" name="flightNo">
     </label><br>
    <label>Departs:
-    <input type="datetime-local" id="meeting-time"
-       name="meeting-time" value="2018-06-12T19:30">
-    </label><br>
+    <input type="datetime-local" name="departs" value="yyyy-mm-ddT19:30">
+  </label><br>
     <input type="submit" value="Add Flight">
   </form>
 
