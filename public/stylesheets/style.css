@@ -1,12 +1,55 @@
+/* Partials - Heading View */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px 'Oswald', sans-serif;
+  color: #7c7b89; 
+  background-color: #f1e4de;
+  padding: 7vh;
 }
 
 a {
-  color: #00B7FF;
+  color: #0b7fab;
 }
-.red {
-  color: red; 
 
+nav {
+  text-align: center;
+}
+
+/* Homepage - Main Index View  */
+.homePH1 {
+  text-align: center;
+}
+
+/* New - New Flight View */
+
+
+
+
+
+
+/* Index - All Flights View */
+
+.indexH1 {
+  font-size: 45px;
+  text-align: center;
+}
+
+table {
+  font-size: 16px;
+  display: grid;
+  justify-content: center;
+}
+
+.colsAll {
+  display: grid;
+  grid-template-columns: 10vmin 8vmin 10vmin 37vmin;
+  justify-content: center;
+  text-align: left;
+}
+
+#collsAllName {
+  font-size: 20px;
+}
+
+#past {
+  color: #e9723d; 
 }

@@ -1,26 +1,26 @@
 <%- include('../partials/header') %>
-<h1>Flight List</h1>
+<h1 class="indexH1">Flight List</h1>
   <table>
     <thead>
-      <tr>
-        <th>Airline</th>
-        <th>Airport</th>
-        <th>Flight Number</th>
-        <th>Departs</th>
+        <tr class="colsAll" id="collsAllName">
+        <th class="indexCols1">Airline</th>
+        <th class="indexCols2">Airport</th>
+        <th class="indexCols3">Flight No.</th>
+        <th class="indexCols4">Departs</th>
       </tr>
     </thead>
     <tbody>
      <% flights.forEach(function(f) { %>
-        <tr class="<%= (f.departs < new Date()) ? 'red' : '' %>">
-     
-          <td><%= f.airline %></td>
-          <td><%= f.airport %></td>
-          <td><%= f.flightNo %></td>
-          <td><%= f.departs %></td>
+        <tr class="colsAll" id="<%= (f.departs < new Date()) ? 'past' : '' %>">
+          <td class="indexCols1"><%= f.airline %></td>
+          <td class="indexCols2"><%= f.airport %></td>
+          <td class="indexCols3"><%= f.flightNo %></td>
+          <td class="indexCols4"><%= f.departs %></td>
         </tr>
       <% }); %>
     </tbody>
   </table>
+
 
 
 <%- include('../partials/footer') %>
