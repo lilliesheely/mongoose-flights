@@ -2,6 +2,13 @@ const mongoose = require('mongoose');
 // option shortcut variable
 const Schema =mongoose.Schema; 
 
+const destinationSchema = new Schema ({
+    airport: String, 
+    arrival: Date
+}, {
+    timestamps: true
+})
+
 const flightSchema = new Schema ({
     airline: String, 
     airport: {
@@ -19,7 +26,8 @@ const flightSchema = new Schema ({
             let date = new Date(); 
             return date.setFullYear(date.getFullYear() + 1);  
         }
-    }
+    },
+    destinations: [destinationSchema]
 }, {
     timestamps: true
 });

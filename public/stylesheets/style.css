@@ -1,28 +1,56 @@
 /* Partials - Heading View */
-body {
-  font: 20px 'Oswald', sans-serif;
-  color: #7c7b89; 
+* {
   background-color: #f1e4de;
-  padding: 7vh;
+  color: #7c7b89; 
+  font: 20px 'Oswald', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid; 
+  grid-template-areas: "nav" "main";
 }
 
 a {
   color: #0b7fab;
 }
 
-nav {
-  text-align: center;
+body > nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Homepage - Main Index View  */
-.homePH1 {
-  text-align: center;
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-y: scroll;
 }
 
 /* New - New Flight View */
 
+#newFlightForm {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
 
+#newFlightForm * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
 
+#newFlightForm input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  justify-content: center;
+}
 
 
 

@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <div>Airline: </div>
+    <div><%= flight.airline %></div>
+    <div>Airport: </div>
+    <div><%= flight.airport %></div>
+    <div>Flight No.: </div>
+    <div><%= flight.flightNo %></div>
+    <div>Departs: </div>
+    <div><%= flight.departs %></div>
+  </section>
+
+
+  <form id="add-des-form" method="POST" 
+    action="/flights/<%= flight._id %>/destinations">
+    <label>Add Destination(s):</label>
+    <textarea name="content"></textarea>
+    <label>Arrivals:
+        <input type="datetime-local" name="arrival" value="">
+      </label><br>
+      <input type="submit" value="Add Destination">
+
+
+<% if (flight.destinations.length) { %>
+    <table>
+        <thead>
+          <tr>
+            <th>Destinations</th>
+            <th>Arrival</th>
+          </tr>
+        </thead>
+        <tbody>       
+            <% flight.destinations.forEach(function(f) { %>
+                <tr>
+                  <td><%= f.content %></td>
+                  <td><%= f.arrival %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        <% } else { %>
+          <h5>No Additional Stops</h5>
+        <% } %>
+<%- include('../partials/footer') %>
