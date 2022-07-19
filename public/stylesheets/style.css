@@ -9,11 +9,8 @@ body {
   margin: 0;
   height: 100vh;
   display: grid; 
+  grid-template-rows: 50px 1fr;
   grid-template-areas: "nav" "main";
-}
-
-a {
-  color: #0b7fab;
 }
 
 body > nav {
@@ -23,61 +20,87 @@ body > nav {
   align-items: center;
 }
 
+a {
+  color: #0b7fab;
+}
+
 body > main {
   grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   overflow-y: scroll;
 }
 
-/* New - New Flight View */
-
-#newFlightForm {
-  display: grid;
-  grid-gap: 8px;
-  grid-template-columns: repeat(2, minmax(auto, 22rem));
+h1 {
+  font-size: 40px;
+}
+/* Index - All Flights */
+.colsAll {
+  grid-gap: 5px;
+  grid-template-columns: repeat(5, minmax(auto, 22rem));
 }
 
-#newFlightForm * {
+.collsAllName {
+  font-size: 40px;
+}
+
+/* New - New Flight View */
+#newFlightForm {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 15vmin 30vmin;
+  justify-content: center;
+}
+
+#newFlightForm  {
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
-  padding: 5px;
   border-radius: 5px;
 }
 
 #newFlightForm input[type="submit"] {
-  grid-column: span 2;
-  width: 10rem;
-  justify-content: center;
+  width: 20rem;
 }
-
-
 
 /* Index - All Flights View */
-
-.indexH1 {
-  font-size: 45px;
-  text-align: center;
-}
-
-table {
-  font-size: 16px;
-  display: grid;
-  justify-content: center;
-}
-
 .colsAll {
   display: grid;
-  grid-template-columns: 10vmin 8vmin 10vmin 37vmin;
+  grid-template-columns: 10vmin 8vmin 10vmin 63vmin 10vmin;
   justify-content: center;
   text-align: left;
 }
 
-#collsAllName {
-  font-size: 20px;
-}
-
 #past {
   color: #e9723d; 
+}
+
+
+/* Show Page - Show View*/
+  
+#add-des-form {
+  display: grid;
+  grid-template-columns: 15vmin 55vmin;;
+  gap: 1rem;
+  justify-content: left;
+}
+
+#new-dest {
+  display: grid;
+  grid-template-columns:  10vmin 65vmin;
+  gap: 1rem;
+  justify-content: center;
+  text-align: left;
+}
+
+#flight-details {
+  display: grid;
+  grid-template-columns:  10vmin 65vmin;
+  grid-gap: 1vh;
+  justify-content: center;
+}
+
+.newDestButton input[type="submit"] {
+  width: 15rem;
 }
