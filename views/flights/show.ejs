@@ -14,26 +14,35 @@
 
   <form id="add-des-form" method="POST" 
     action="/flights/<%= flight._id %>/destinations">
-    <label>Add Destination(s):</label>
-    <textarea name="content"></textarea>
-    <label>Arrivals:
+    <label>Airport
+        <select name="airport">
+
+        <% ["AUS", "DFW", "LAX", "SAN", "DEN"].forEach(function(d) { %>
+        <% if (flight.airport === d ) { %>
+            <% } else if (!flight.destinations.some(destinations => destinations.airport === d)) { %> 
+            <option value ="<%= d %>"><%= d %> </option>
+            <% } %>
+        <% }) %>
+          
+        </select>
+    <label>Arrival:
         <input type="datetime-local" name="arrival" value="">
       </label><br>
       <input type="submit" value="Add Destination">
-
 
 <% if (flight.destinations.length) { %>
     <table>
         <thead>
           <tr>
-            <th>Destinations</th>
-            <th>Arrival</th>
+            <th>Airport</th>
+            <th>Arrival (Date & Time)</th>
+
           </tr>
         </thead>
         <tbody>       
             <% flight.destinations.forEach(function(f) { %>
                 <tr>
-                  <td><%= f.content %></td>
+                  <td><%= f.airport %></td>
                   <td><%= f.arrival %></td>
                 </tr>
               <% }); %>
