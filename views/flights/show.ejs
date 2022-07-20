@@ -12,7 +12,12 @@
   <div><%= flight.departs %></div>
 </section>
 
-<br><br>
+<br>
+<a href="/tickets/<%= flight._id %>/new">Add New Ticket</a>
+</form>
+<br>
+<br>  
+
 <form id="add-des-form" method="POST" 
   action="/flights/<%= flight._id %>/destinations">
   <label>Airport
@@ -28,10 +33,10 @@
   <label>Arrival:
     <input type="datetime-local" name="arrival" value="">
   </label><br>
-    <input class="newDestButton" type="submit" value="Add Destination">
+    <input class="newDestButton" type="submit" value="Add Layover">
 </form>
-<br><br>
 
+<h5>Layovers</h5>
 <% if (flight.destinations.length) { %>
   <table  >
     <thead>

@@ -36,6 +36,11 @@ h1 {
   font-size: 40px;
 }
 /* Index - All Flights */
+
+.past {
+  color: #e9723d; 
+}
+
 .colsAll {
   grid-gap: 5px;
   grid-template-columns: repeat(5, minmax(auto, 22rem));
