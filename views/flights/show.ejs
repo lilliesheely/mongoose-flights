@@ -13,10 +13,48 @@
 </section>
 
 <br>
-<a href="/tickets/<%= flight._id %>/new">Add New Ticket</a>
+<form action="/tickets/<%= flight._id %>/new">
+  <input type="submit" value="Add Ticket">
 </form>
-<br>
-<br>  
+
+<h5>Tickets</h5>
+  <table>
+    <thead>
+      <tr>
+        <th>Seat</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>       
+      <tr>
+        <td><%= ticket.seat %></td>
+        <td><%= ticket.price %></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <form id="add-des-form" method="POST" 
   action="/flights/<%= flight._id %>/destinations">
