@@ -39,8 +39,7 @@ function show(req, res) {
     Flight.findById(req.params.id, function(err, flight) {
         Ticket.find({flight: flight._id}, function(err, tickets) {
         flight.destinations.sort((a,b) => Number(a.arrival) - Number(b.arrival));
-        res.render('flights/show', {title: 'Flight Details', flight,  tickets })
+        res.render('flights/show', {title: 'Flight Details', flight, tickets})
         });
-    }); 
-}
-
+    })}
+  
