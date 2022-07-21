@@ -109,7 +109,7 @@ h1 {
 
 #add-tickets-section {
   display: grid;
-  grid-template-columns: 15vmin 55vmin;
+  grid-template-columns: 15vmin 15vmin 15vmin;
   gap: 1rem;
   justify-content: center;
   align-items: center;
