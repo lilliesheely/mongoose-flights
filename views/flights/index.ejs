@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<table>
+<table class="all-flights">
   <thead>
     <tr id="collsAllName" class="colsAll">
       <th>Airline</th>
@@ -12,7 +12,7 @@
   </thead>
   <tbody>
     <% flights.forEach(function(f) { %>
-      <tr class="colsAll" class="<%= (f.departs < new Date()) ? 'past' : '' %>" >
+      <tr class="colsAll" id="<%= (f.departs < new Date()) ? 'past' : '' %>" >
         <td><%= f.airline %></td>
         <td><%= f.airport %></td>
         <td><%= f.flightNo %></td>
