@@ -84,7 +84,7 @@ h1 {
 }
 .colsAll {
   display: grid;
-  grid-template-columns: 10vmin 8vmin 10vmin 63vmin 10vmin;
+  grid-template-columns: 10vmin 6vmin 8vmin 48vmin 8vmin;
   justify-content: center;
   text-align: left;
 }
