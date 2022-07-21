@@ -41,5 +41,6 @@ function show(req, res) {
         flight.destinations.sort((a,b) => Number(a.arrival) - Number(b.arrival));
         res.render('flights/show', {title: 'Flight Details', flight, tickets})
         });
-    })}
+    })
+}
   

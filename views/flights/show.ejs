@@ -1,16 +1,16 @@
 <%- include('../partials/header') %>
 
 <section id="show-page" >
-<section id="flight-details">
-  <div>Airline: </div>
-  <div><%= flight.airline %></div>
-  <div>Airport: </div>
-  <div><%= flight.airport %></div>
-  <div>Flight No.: </div>
-  <div><%= flight.flightNo %></div>
-  <div>Departs: </div>
-  <div><%= flight.departs %></div>
-</section>
+  <section id="flight-details">
+    <div>Airline: </div>
+    <div><%= flight.airline %></div>
+    <div>Airport: </div>
+    <div><%= flight.airport %></div>
+    <div>Flight No.: </div>
+    <div><%= flight.flightNo %></div>
+    <div>Departs: </div>
+    <div><%= flight.departs %></div>
+  </section>
 <br>
 
 <section id="add-tickets-section" >
@@ -33,12 +33,6 @@
         <td><%= t.seat %></td>
         <td><%= '$' + t.price %></td>
         <td> 
-          <form action="/flights/<%= flight._id %>/tickets/delete?_method=DELETE"
-          method="POST"
-          class="delete-ticket"
-          >  
-          <button type="submit">X</button>  
-        </form>
         </td>
       </tr>
       <% })%>
